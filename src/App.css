@@ -1,38 +1,286 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
+  padding: 0px;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  height: 100vh;
+  width: 100vw;
+  /* 100vh = 34.25rem =  548px*/
+  /* 1rem = 16px */
+  background-color: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.Header {
+  height: 4rem;
+  width: 100%;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: transparent;
+}
+
+.left {
+  height: 2rem;
+  width: auto;
+
+  margin-left: 2rem;
+  background-color: transparent;
+}
+
+.right {
+  height: 2rem;
+  width: auto;
+
+  display: flex;
+  flex-wrap: nowrap;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-right: 2rem;
+  background-color: transparent;
+}
+
+.fileContainer {
+  height: 2rem;
+  width: auto;
+
+  margin-right: 0.5rem;
+
+  font-size: 0.75rem;
+
+  display: flex;
+  flex-wrap: nowrap;
+
+  align-items: center;
+  justify-content: start;
+
+  background-color: transparent;
+  color: #0fa958;
+}
+
+.buttonContainer {
+  height: 2rem;
+  width: auto;
+
+  margin-left: 0.5rem;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  display: flex;
+  flex-wrap: nowrap;
+
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  padding: 0.25rem 0.75rem;
+
+  border: 1.5px solid #000000;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.logoImage {
+  height: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.fileImage {
+  font-weight: 100;
+
+  border: 1.5px solid #0fa958;
+  border-radius: 0.25rem;
+}
+
+.ChatboxWrapper {
+  height: calc(100vh - 8rem);
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+}
+
+.Chatbox {
+  height: 100%;
+  width: 90%;
+  background-color: transparent;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: start;
+
+  overflow-y: auto;
+}
+
+.ChatWrapper {
+  height: auto;
+  width: 90%;
+
+  display: flex;
+
+  align-items: start;
+  justify-content: start;
+
+  margin-top: 1rem;
+
+  flex-shrink: 0; /* Prevent shrinking */
+  flex-grow: 0; /* Prevent growing */
+
+  background-color: transparent;
+}
+
+.userImage {
+  height: 2rem;
+  width: 2rem;
+
+  border-radius: 2rem;
+  margin: 0.5rem;
+
+  background-color: transparent;
+}
+
+.Chat {
+  height: auto;
+  width: 90%;
+  margin: 0.5rem;
+
+  background-color: transparent;
+}
+
+.ChatInputWrapper {
+  height: 4rem;
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+}
+
+.ChatInput {
+  height: 2rem;
+  width: 90%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+}
+
+.ChatInput input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+
+  padding: 1rem;
+
+  border-radius: 0.5rem;
+  border: 0.5px solid #e4e8ee;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+  padding-left: 2rem;
+  background-color: #f6f7f9;
+}
+
+.ChatInput input::placeholder {
+  color: #c6cad0;
+}
+
+.ChatInput span {
+  color: #c6cad0;
+  position: absolute;
+
+  right: 6rem;
+}
+
+@media only screen and (min-width: 1201px) {
+  .ChatInput span {
+    right: 8rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 1200px) {
+  .ChatboxWrapper {
+    height: calc(100vh - 7rem);
   }
+
+  .ChatInputWrapper {
+    height: 3rem;
+  }
+
+  .ChatInput input {
+    padding: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .ChatInput span {
+    right: 5rem;
+  }
+
+  .ChatInput input {
+    border-radius: 0.25rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 600px) {
+  .buttonContainer {
+    padding: 0rem 0.5rem;
+  }
+
+  .buttonContainer span {
+    font-size: 1rem;
+  }
+
+  .buttonContainer div {
+    display: none;
+  }
+
+  .ChatInput span {
+    right: 4rem;
+  }
+}
+
+.defaultInputButton {
+  display: none;
+}
+
+.customInputButton {
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  background-color: transparent;
+}
+
+.hidden {
+  display: none;
+}
+
+.sendData {
+  cursor: pointer;
 }
