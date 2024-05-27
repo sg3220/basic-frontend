@@ -11,6 +11,12 @@ const ChatInput = ({ onSendMessage }) => {
     }
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleSend();
+    }
+  };
+
   return (
     <div className="ChatInputWrapper">
       <div className="ChatInput">
@@ -19,6 +25,7 @@ const ChatInput = ({ onSendMessage }) => {
           id="input001"
           type="text"
           placeholder="Send a message..."
+          onKeyDown={handleKeyDown}
         />
         <span
           onClick={handleSend}

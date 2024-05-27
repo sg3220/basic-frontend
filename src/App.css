@@ -212,6 +212,69 @@ body {
   right: 6rem;
 }
 
+.Login {
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.loginWrapper {
+  height: 50%;
+  width: 20%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: space-evenly;
+
+  border: 1.5px solid #0faa58;
+  border-radius: 0.25rem;
+
+  background-color: #ffffff;
+}
+
+.loginInput {
+  outline: none;
+  border: none;
+  width: 75%;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+
+  padding: 0.5rem 2rem;
+
+  border: 1.5px solid #eeeeee;
+  border-radius: 0.25rem;
+
+  margin-bottom: 1rem;
+}
+
+.loginInput:focus {
+  border: 1.5px solid #0faa58;
+}
+
+.loginButton {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #0faa58;
+
+  width: 95%;
+
+  border-radius: 0.25rem;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+
+  padding: 0.5rem 2rem;
+}
+
 @media only screen and (min-width: 1201px) {
   .ChatInput span {
     right: 8rem;
@@ -230,6 +293,10 @@ body {
   .ChatInput input {
     padding: 0.5rem;
   }
+
+  .loginInput {
+    width: 75%;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -240,9 +307,20 @@ body {
   .ChatInput input {
     border-radius: 0.25rem;
   }
+
+  .loginInput {
+    width: 65%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
+  .loginInput {
+    width: 70%;
+  }
+
+  .loginWrapper {
+    width: 30%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -260,6 +338,10 @@ body {
 
   .ChatInput span {
     right: 4rem;
+  }
+
+  .loginInput {
+    width: 65%;
   }
 }
 
